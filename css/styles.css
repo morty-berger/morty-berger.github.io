@@ -149,3 +149,155 @@ a {
     }
     
 }
+/**Costumer review **/ 
+
+.review {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #E6E6E6;
+    border-radius: 20px;
+    padding: 24px;
+    align-items: flex-start;
+    max-width: 400px;
+}
+.star {
+    font-size: 2rem;
+    color: #c0c0c0;
+}
+.star--selected{
+    color: #FFC633;
+}
+.review__name {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.review__text {
+    margin-top: 0;
+}
+@media screen and (min-width: 1024px) {
+    .review {
+        padding: 28px 32px;
+    } 
+    .star {
+        font-size: 2.3rem;
+    }
+    .review__name {
+        font-size: 2rem;
+    }
+    .review__text {
+        font-size: 1.6rem;
+    }   
+}
+
+
+/** product **/
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    
+}
+.product__img {
+    border-radius: 14px;
+}
+.product__name {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.product__price {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+.product-price__current-price {
+    margin: 1rem;
+    color: #000;
+    margin-left: 0;
+    font-weight: 700;
+
+}
+.product-price__original-price {
+    margin: 1rem; 
+    margin-left: 0;
+    text-decoration: line-through;
+}
+.product-price__badge {
+    align-self: center;
+}
+@media screen and (min-width: 1024px) {
+    .product {
+        width: 295px;
+    }
+    .product__name {
+        font-size: 2rem;
+    }
+    .product__price {
+        font-size: 2.4rem;
+        margin-top: 5px;
+    }
+}
+
+/** grid **/
+.grid {
+    display: grid;
+}
+
+@media screen and (min-width: 768px) {
+    .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid--60x40 {
+        grid-template-columns: 60% 40%;
+    }
+}
+
+/** callaout **/
+
+.callout {
+    background-color: #000;
+    border-radius: 26px;
+    padding: 32px 24px;
+    align-items: center;
+}
+.callout__heading {
+    color: white;
+    margin-top: 0;
+    line-height: 3.3rem;
+    font-size: 3.2rem;
+}
+.callout__btn {
+    background-color: white;
+    color: #000;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    transition: all 0.15s;
+    width: 100%;
+    outline: none;
+}
+.callout-btn__email {
+    background-image: url(/mail_24.svg);
+    background-repeat: no-repeat;
+    background-position: center left 20px;
+    padding-left: 5rem;
+    text-align: start;
+}
+
+.callout__btn:hover {
+    background-color: #f4f4f4;
+}
+
+@media screen and (min-width: 768px) {
+    .callout {
+        padding: 36px 64px;
+    }
+    .callout__heading {
+        margin-right: 20px;
+        font-size: 4rem;
+        line-height: 4rem;
+        margin-bottom: 0;
+    }
+    
+}

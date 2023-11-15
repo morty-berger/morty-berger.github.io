@@ -358,4 +358,98 @@ a {
     }
    
 }
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+/* nav bar */
+
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 200px;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-bar__logo > img {
+    max-height: 50px;
+}
+.nav-bar__list {
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .2s;
+}
+.nav-bar--togel__input:checked ~ .nav-bar__list {
+    opacity: 1;
+    height: 100%;
+    margin-top: 30px;
+}
+.nav-bar--list__item {
+    padding-bottom: 7px;
+    margin-bottom: 13px;
+    color: var(--color-body);
+    font-size: 30px;
+    border-bottom: 2px solid #f0f0f0;
+    transition: transform .15s, color .03s;
+}
+.nav-bar--list__item:hover {
+    color: var(--color-body-darker);
+    transform: translatex(5px);
+}
+.nav-bar--togel__input {
+    display: none;
+}
+.togel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+}
+.togel span {
+    width: 30px;
+    height: 4px;
+    background: var(--color-body-darker);
+    border-radius: 6px;
+    transition: all .15s ease-out;
+}
+.nav-bar--togel__input:checked ~ .nav-bar__togel > .togel > .togel-line--1 {
+    transform-origin: top left;
+    transform: rotate(45deg);
+}
+.nav-bar--togel__input:checked ~ .nav-bar__togel > .togel > .togel-line--2 {
+    display: none;
+}
+.nav-bar--togel__input:checked ~ .nav-bar__togel > .togel > .togel-line--3 {
+    transform-origin: bottom left ;
+    transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px) {
+    .nav-bar__list {
+        display: flex;
+        width: auto;
+        margin-top: 0;
+        opacity: 1;
+        height: 100%;
+    }
+    .nav-bar--list__item {
+        margin-left: 20px;
+        font-size: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+    .nav-bar--list__item:hover {
+        transform: none;
+    }
+    .nav-bar__togel {
+        display: none;
+    }
+}

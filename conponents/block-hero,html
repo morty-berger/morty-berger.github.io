@@ -1,0 +1,38 @@
+<div class="block block--hero">
+  <div class="containor grid grid--60x40">
+    <div class="hero__main">
+      <h1 class="hero-main__heading">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+      <p class="hero-main__body">
+        Browse through our diverse range of meticulously crafted garments,
+        designed to bring out your individuality and cater to your sense of
+        style.
+      </p>
+      <a href="#"
+        ><span class="btn btn--accend hero-main__btn">shop now</span></a
+      >
+      <ul class="list feature-list hero-main__feature-list">
+        <li class="feature-list__item">
+          <span class="feature-list__content"
+            ><p class="feature-list__number">200+</p>
+            <p class="feature-list__text">International Brands</p></span
+          >
+        </li>
+        <li class="feature-list__item">
+          <span class="feature-list__content"
+            ><p class="feature-list__number">2,000+</p>
+            <p class="feature-list__text">High-Quality Products</p>
+          </span>
+        </li>
+        <li class="feature-list__item">
+          <span class="feature-list__content"
+            ><p class="feature-list__number">30,000</p>
+            <p class="feature-list__text">Happy Customers</p></span
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="hero__img">
+      <img src="/hero-img.png" alt="a man wearing nice shoes" />
+    </div>
+  </div>
+</div>

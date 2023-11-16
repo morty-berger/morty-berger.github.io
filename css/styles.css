@@ -203,6 +203,7 @@ a {
     border-radius: 14px;
 }
 .product__name {
+    text-align: start;
     font-size: 1.6rem;
     margin-bottom: 0;
     text-transform: capitalize;
@@ -226,6 +227,9 @@ a {
 }
 .product-price__badge {
     align-self: center;
+}
+.product__rating {
+    text-align: start;
 }
 @media screen and (min-width: 1024px) {
     .product {
@@ -522,4 +526,116 @@ a {
     .feature-list__item:not(:last-child)::after {
         right: -15px;
     }
+}
+
+/** block **/
+.block {
+    padding: 0 20px ;
+}
+
+/** containor **/
+
+.containor {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/** hero block **/
+.hero__main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-main__heading {
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    line-height: 4rem;
+    max-width: 430px;
+}
+.hero-main__body {
+    max-width: 530px;
+}
+.hero-main__btn {
+    display: block;
+    width: 270px;
+    margin-top: 3.2rem;
+}
+.hero__img {
+    margin: auto;
+    margin-top: 20px;
+    max-width: 500px;
+}
+.hero__img > img {
+
+    width: 100%;
+    max-width: 500px;   
+}
+@media screen and (min-width: 768px) {
+    .hero__main {
+        display: block;
+        align-items: start;
+        text-align: start;
+    }
+    .hero-main__btn {
+        display: inline-block;
+        width: auto;
+    }
+    .hero-main__heading,
+    .hero-main__body {
+        max-width: 100vw;
+        margin-left: 0;
+    }
+    .hero__img {
+        margin: 40px 20px;
+        max-width: 100vw;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    .hero-main__heading {
+        line-height: 6rem;
+    }
+    
+}
+
+/* product list */
+
+.product-list--scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: scroll;
+}
+/* For WebKit (Chrome, Safari) */
+.product-list--scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  .product-list--scroll {
+    scrollbar-width: none; /* Hides the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides the scrollbar in Internet Explorer/Edge */
+  }
+  
+  /* For Microsoft Edge */
+  @supports (-ms-ime-align:auto) {
+    .product-list--scroll {
+      -ms-overflow-style: none; /* Hides the scrollbar in Microsoft Edge */
+    }
+  }
+  
+
+@media screen and (max-width: 680px) {
+    .product-list--scroll {
+        justify-content: start;
+    }    
+}
+/* new arivels block */
+
+.block--new-arivvals {
+    text-align: center;
 }

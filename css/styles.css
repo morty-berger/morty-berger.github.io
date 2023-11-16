@@ -102,6 +102,7 @@ a {
     color: #000;
     border: 2px solid #E6E6E6;
     transition: all 0.15s;
+    background-color: #00000000;
 }
 .btn--outline:hover {
     border: 2px solid #bababa;
@@ -119,7 +120,10 @@ a {
 .btn--small {
     padding: 10px 20px;
 }
-
+.btn--wide {
+    padding-left: 100px;
+    padding-right: 100px;
+}
 @media screen and (min-width: 1024px) {
     .btn {
         font-size: 1.6rem;
@@ -638,4 +642,28 @@ a {
 
 .block--new-arivvals {
     text-align: center;
+}
+.block--new-arivvals::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #f7f5f5;
+    width: 80%;
+    margin: 0 auto; /* Center the line horizontally */
+  }
+  
+.block--new-arivvals__btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 769px) {
+    .block--new-arivvals::after {
+        border-bottom: none;
+      }
+    
+}
+@media screen and (max-width: 420px) {
+    .block--new-arivvals__btn {
+        width: 100%;
+    }
+   
 }

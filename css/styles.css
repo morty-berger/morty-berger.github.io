@@ -328,7 +328,6 @@ a {
     text-align: center;
     font-size: 3.2rem;
     margin-top: 0;
-
 }
 .category-menu__list {
     display: flex;
@@ -341,6 +340,7 @@ a {
     margin: 0;
     transform: translate(25px, 40px);
     font-size: 2.4rem;
+    font-weight: 500;
 }
 .category-menu__item {
     transition: transform 0.15s;
@@ -666,4 +666,18 @@ a {
         width: 100%;
     }
    
+}
+
+/** category menu block **/
+
+.category-menu__containor {
+    margin: auto;
+    max-width: 400px;
+}
+
+@media  screen and (min-width: 768px) {
+    .category-menu__containor {
+        max-width: 930px;
+    }
+    
 }

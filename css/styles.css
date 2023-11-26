@@ -163,6 +163,7 @@ a {
     padding: 24px;
     align-items: flex-start;
     max-width: 400px;
+    min-width: 360px;
 }
 .star {
     font-size: 2rem;
@@ -193,6 +194,13 @@ a {
     .review__text {
         font-size: 1.6rem;
     }   
+}
+@media screen and (max-width: 380px) {
+    .review {
+        max-width: 85vw;
+        min-width: 85vw;
+    }
+    
 }
 
 
@@ -681,3 +689,40 @@ a {
     }
     
 }
+/** customer review block **/
+.scroll-list {
+    position: relative;
+}
+
+.customer-review__list-scroll {
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+    
+}
+.customer-review__list-scroll::after {
+    content: url(/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg);
+    opacity: 0.5;
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%); 
+    
+}
+/* For WebKit (Chrome, Safari) */
+.customer-review__list-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  .customer-review__list-scroll {
+    scrollbar-width: none; /* Hides the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides the scrollbar in Internet Explorer/Edge */
+  }
+  
+  /* For Microsoft Edge */
+  @supports (-ms-ime-align:auto) {
+    .customer-review__list-scroll {
+      -ms-overflow-style: none; /* Hides the scrollbar in Microsoft Edge */
+    }
+  }

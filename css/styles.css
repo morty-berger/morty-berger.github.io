@@ -701,8 +701,8 @@ a {
     
 }
 .customer-review__list-scroll::after {
-    content: url(/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg);
-    opacity: 0.5;
+    content: url(/arrow-left.svg);
+    opacity: 0.7;
     position: absolute;
     right: -5px;
     top: 50%;

@@ -74,6 +74,13 @@ a {
     
 }
 
+/** containor **/
+
+.containor {
+    max-width: 1200px;
+    margin: auto;
+}
+
 /** buttons **/
 
 
@@ -331,6 +338,7 @@ a {
     border-radius: 20px;
     padding: 40px 20px;
     min-width: 310px;
+    margin-top: 120px;
 }
 .category-menu__heading {
     text-align: center;
@@ -387,9 +395,13 @@ a {
     display: flex;
     flex-wrap: wrap;
     max-height: 200px;
-    padding: 10px 30px;
+    padding: 10px 0px;
     align-items: center;
     justify-content: space-between;
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 40px;
+    transition: .15s ease-in;
 }
 .nav-bar__logo > img {
     max-height: 50px;
@@ -413,6 +425,7 @@ a {
     font-size: 30px;
     border-bottom: 2px solid #f0f0f0;
     transition: transform .15s, color .03s;
+    text-transform: uppercase;
 }
 .nav-bar--list__item:hover {
     color: var(--color-body-darker);
@@ -545,13 +558,6 @@ a {
     padding: 0 20px ;
 }
 
-/** containor **/
-
-.containor {
-    max-width: 1200px;
-    margin: auto;
-}
-
 /** hero block **/
 .hero__main {
     text-align: center;
@@ -612,15 +618,30 @@ a {
 }
 
 /* product list */
-
+.product-list--scroll__containor {
+    position: relative;
+}
 .product-list--scroll {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     flex-wrap: nowrap;
-    width: 100%;
-    overflow: scroll;
+    overflow-x: auto;
+    position: relative;
+}
+.product-list--scroll--containor__scroll-bar {
+    position: absolute;
+    top: 35%;
+    right: -20px;
+    appearance: none;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
 }
 /* For WebKit (Chrome, Safari) */
 .product-list--scroll::-webkit-scrollbar {
@@ -642,14 +663,13 @@ a {
   
 
 @media screen and (max-width: 680px) {
-    .product-list--scroll {
-        justify-content: start;
-    }    
+     
 }
 /* new arivels block */
 
 .block--new-arivvals {
     text-align: center;
+    max-width: 1285px;
 }
 .block--new-arivvals::after {
     content: '';
@@ -690,6 +710,9 @@ a {
     
 }
 /** customer review block **/
+.customer-review__containor {
+    margin-top: 100px;
+}
 .scroll-list {
     position: relative;
 }

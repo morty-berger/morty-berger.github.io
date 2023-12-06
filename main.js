@@ -13,4 +13,50 @@ function uncheckCheckbox() {
       uncheckCheckbox();
     }
   });
+
+
+
+
+
+
+
+
+
+
+
+const container = document.getElementById('product-list--scroll');
+const scrollButton = document.getElementById('scrollButton');
+
+  function checkOverflow() {
+      if (container.scrollWidth > container.clientWidth) {
+          container.style.justifyContent = 'flex-start';
+          scrollButton.style.display = 'block';
+      } else {
+          container.style.justifyContent = 'center';
+          scrollButton.style.display = 'none';
+      }
+  }
   
+  window.addEventListener('resize', checkOverflow);
+  container.addEventListener('scroll', checkOverflow);
+  
+  // Initial check on page load
+  checkOverflow();
+
+ 
+
+////const scrollButton = document.getElementById('scrollButton');
+////
+////function checkOverflow() {
+////    if (container.scrollWidth > container.clientWidth) {
+////      scrollButton.style.display = 'block'; // Show myDiv if overflow exists
+////    } else {
+////      scrollButton.style.display = 'none'; // Hide myDiv if no overflow
+////    }
+////}
+////
+////window.addEventListener('resize', checkOverflow);
+////container.addEventListener('scroll', checkOverflow);
+////
+////// Initial check on page load
+////checkOverflow();

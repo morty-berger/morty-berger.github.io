@@ -24,26 +24,52 @@ function uncheckCheckbox() {
 
 
 
-const container = document.getElementById('product-list--scroll');
-const scrollButton = document.getElementById('scrollButton');
-
-  function checkOverflow() {
-      if (container.scrollWidth > container.clientWidth) {
-          container.style.justifyContent = 'flex-start';
-          scrollButton.style.display = 'block';
-      } else {
-          container.style.justifyContent = 'center';
-          scrollButton.style.display = 'none';
-      }
-  }
-  
-  window.addEventListener('resize', checkOverflow);
-  container.addEventListener('scroll', checkOverflow);
-  
-  // Initial check on page load
-  checkOverflow();
-
+///  const container = document.getElementById('product-list--scroll');
+///  const scrollButton = document.getElementById('scrollButton');
+///  
+///    function checkOverflow() {
+///        if (container.scrollWidth > container.clientWidth) {
+///            container.style.justifyContent = 'flex-start';
+///            scrollButton.style.display = 'block';
+///        } else {
+///            container.style.justifyContent = 'center';
+///            scrollButton.style.display = 'none';
+///        }
+///    }
+///    
+///    window.addEventListener('resize', checkOverflow);
+///    container.addEventListener('scroll', checkOverflow);
+///    
+///    // Initial check on page load
+///    checkOverflow();
+///  
  
+const containers = document.querySelectorAll(" .product-list--scroll--id");
+const scrollButtons = document.querySelectorAll(" .scrollButton--id");
+  
+function checkOverflow() {
+    containers.forEach((container, index) => {
+        const scrollButton = scrollButtons[index];
+
+        if (container.scrollWidth > container.clientWidth) {
+            container.style.justifyContent = 'flex-start';
+            scrollButton.style.display = 'block';
+        } else {
+            container.style.justifyContent = 'center';
+            scrollButton.style.display = 'none';
+        }
+    });
+}
+  
+window.addEventListener('resize', checkOverflow);
+containers.forEach(container => {
+    container.addEventListener('scroll', checkOverflow);
+});
+  
+// Initial check on page load
+checkOverflow();
+
+  
 
 ////const scrollButton = document.getElementById('scrollButton');
 ////

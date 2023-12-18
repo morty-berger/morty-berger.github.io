@@ -338,7 +338,7 @@ a {
     border-radius: 20px;
     padding: 40px 20px;
     min-width: 310px;
-    margin-top: 120px;
+    margin-top: 65px;
 }
 .category-menu__heading {
     text-align: center;
@@ -394,13 +394,12 @@ a {
 .nav-bar {
     display: flex;
     flex-wrap: wrap;
-    max-height: 200px;
+    max-height: 315px;
     padding: 10px 0px;
     align-items: center;
     justify-content: space-between;
     max-width: 1500px;
     margin: auto;
-    margin-bottom: 40px;
     transition: .15s ease-in;
 }
 .nav-bar__logo > img {
@@ -408,16 +407,21 @@ a {
 }
 .nav-bar__list {
     width: 100vw;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all .2s;
+    margin: 0;
+    transition: all .5s;
 }
 .nav-bar--togel__input:checked ~ .nav-bar__list {
     opacity: 1;
-    height: 100%;
+    max-height: 500px;
     margin-top: 30px;
+    margin-bottom: 30px;
+    transition: all .5s;
+    display: block;
 }
+
 .nav-bar--list__item {
     padding-bottom: 7px;
     margin-bottom: 13px;
@@ -466,7 +470,7 @@ a {
         width: auto;
         margin-top: 0;
         opacity: 1;
-        height: 100%;
+        max-height: 100%;
     }
     .nav-bar--list__item {
         margin-left: 20px;
@@ -566,7 +570,7 @@ a {
     align-items: center;
 }
 .hero-main__heading {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 3rem;
     line-height: 4rem;
     max-width: 430px;
@@ -633,7 +637,7 @@ a {
 .product-list--scroll--containor__scroll-bar {
     position: absolute;
     top: 35%;
-    right: -20px;
+    right: 0px;
     appearance: none;
     background: none;
     border: none;
@@ -642,6 +646,7 @@ a {
     font: inherit;
     color: inherit;
     outline: none;
+    z-index: 999;
 }
 /* For WebKit (Chrome, Safari) */
 .product-list--scroll::-webkit-scrollbar {
@@ -670,6 +675,7 @@ a {
 .block--new-arivvals {
     text-align: center;
     max-width: 1285px;
+    margin-top: 65px;
 }
 .block--new-arivvals::after {
     content: '';
@@ -754,9 +760,10 @@ a {
     background-color: #F0F0F0;
     padding: 140px 100px;
     position: relative;
+    margin-top: 200px;
   }
 .footer--callout {
-    position: fixed;
+    position: absolute;
     top: -100px;
     left: 50%;
     transform: translate(-50%);
